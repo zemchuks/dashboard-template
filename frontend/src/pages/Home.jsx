@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Lottie from 'react-lottie-player';
-import globe from '../utils/lottie/globe.json'
+// import Lottie from 'react-lottie-player';
+// import globe from '../utils/lottie/globe.json'
 import { GlobalOutlined, PhoneOutlined, SafetyCertificateOutlined, UsergroupDeleteOutlined } from '@ant-design/icons'
 
 const Home = () => {
@@ -12,14 +12,14 @@ const Home = () => {
             <section>
                 <div className="relative pt-10 mb-0 flex flex-col items-center justify-center h-screen bg-white">
                     {/* Background animation */}
-                    <Lottie
+                    {/* <Lottie
                         loop
                         animationData={globe}
                         play
                         style={{
                             position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', opacity: 0.3, width: '100%', height: '100%'
                         }}
-                    />
+                    /> */}
                     <div className="relative z-10 max-w-4xl font-medium mx-auto text-center text-6xl">
                         <div>Structured Trade Finance Simplified</div>
 
