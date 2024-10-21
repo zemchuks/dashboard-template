@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Sequence from '../../components/sequenceAnimations'
+// import Sequence from '../../components/sequenceAnimations'
 import { useNavigate } from 'react-router-dom'
 
 const CompanySignup = () => {
