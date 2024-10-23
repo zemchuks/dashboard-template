@@ -43,25 +43,25 @@ const Home = () => {
 
                 {/* ********BORDER  ************** */}
             </section>
-            <hr class="my-6 max-w-6xl bg-white border-gray-300 sm:mx-auto lg:my-3" />
+            <hr className="my-6 max-w-6xl bg-white border-gray-300 sm:mx-auto lg:my-3" />
 
 
 
 
             <div className="max-w-6xl flex flex-col items-center justify-between mx-auto space-y-10 md:flex-row md:space-y-0 md:mb-[40px] md:mt-10 md:space-x-6">
-                <div class="flex flex-col items-center space-y-5 md:flex-row md:space-x-4 md:space-y-0">
+                <div className="flex flex-col items-center space-y-5 md:flex-row md:space-x-4 md:space-y-0">
                     <UsergroupDeleteOutlined className='text-2xl' />
                     <h5 className='text-lg'>1000+ active users</h5>
                 </div>
-                <div class="flex flex-col items-center space-y-5 md:flex-row md:space-x-4 md:space-y-0">
+                <div className="flex flex-col items-center space-y-5 md:flex-row md:space-x-4 md:space-y-0">
                     <GlobalOutlined className='text-2xl' />
                     <h5 className='text-lg'>Multi-national partners</h5>
                 </div>
-                <div class="flex flex-col items-center space-y-5 md:flex-row md:space-x-4 md:space-y-0">
+                <div className="flex flex-col items-center space-y-5 md:flex-row md:space-x-4 md:space-y-0">
                     <PhoneOutlined className='text-2xl' />
                     <h5 className='text-lg'>24/7 Customer Support</h5>
                 </div>
-                <div class="flex flex-col items-center space-y-5 md:flex-row md:space-x-4 md:space-y-0">
+                <div className="flex flex-col items-center space-y-5 md:flex-row md:space-x-4 md:space-y-0">
                     <SafetyCertificateOutlined className='text-2xl' />
                     <h5 className='text-lg'>Certified</h5>
                 </div>

@@ -1,3 +1,4 @@
+import { CloseOutlined } from '@ant-design/icons';
 import React, { useState } from 'react'
 
 const LogoutModal = ({ isVisible, onClose, onConfirm }) => {
@@ -13,13 +14,17 @@ const LogoutModal = ({ isVisible, onClose, onConfirm }) => {
         setTimeout(() => {
             onConfirm(); // Call the onConfirm function
             // navigate('/your-logout-route'); // Replace with your logout route
-        }, 4000);
+        }, 2000);
     };
     if (!isVisible) return null;
     return (
-        <div className="fixed inset-0 z-50 flex items-start justify-center bg-black bg-opacity-50">
-            <div className="rounded-lg bg-white p-8 shadow-2xl mt-[6rem]">
-                <h2 className="text-lg font-bold">Logout from oramsys?</h2>
+        <div className="fixed inset-0 z-50 flex items-start h-screen justify-center bg-black bg-opacity-50">
+            <div className="rounded-lg bg-white slide p-8 shadow-2xl mt-[6rem]">
+                <div className='flex pb-2 items-center justify-between'>
+                    <h2 className="text-lg font-bold">Logout from oramsys?</h2>
+
+                    <CloseOutlined onClick={onClose} className='font-3xl' />
+                </div>
 
                 <p className="mt-2 text-sm text-gray-500">
                     This will log you out of this session. Are you sure you want to log out??

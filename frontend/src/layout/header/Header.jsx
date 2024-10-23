@@ -39,7 +39,7 @@ const Header = () => {
                     {!hideButtons && (
                         <div className="hidden md:flex md:space-x-8">
                             <div>
-                                <Link to='/entitysignup' className="self-start text-[15px] shadow-sm rounded-md py-3 px-3 bg-[#6c63ff] text-white hover:bg-opacity-90 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-150">Sign In</Link>
+                                <Link to='/login' className="self-start text-[15px] shadow-sm rounded-md py-3 px-3 bg-[#6c63ff] text-white hover:bg-opacity-90 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-150">Sign In</Link>
                             </div>
 
                             {/* <div>

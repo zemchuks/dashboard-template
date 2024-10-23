@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { EllipsisOutlined, SearchOutlined } from '@ant-design/icons';
-import { Table, Input, Button, Space, Tag, ConfigProvider, Popover } from 'antd';
-import Highlighter from 'react-highlight-words';
+// import { EllipsisOutlined, SearchOutlined } from '@ant-design/icons';
+// import { Table, Input, Button, Space, Tag, ConfigProvider, Popover } from 'antd';
+// import Highlighter from 'react-highlight-words';
+import { GrTransaction } from "react-icons/gr";
+import { BsBox, BsFillPeopleFill } from "react-icons/bs";
+import { FcBusinessman } from "react-icons/fc";
+import { CiUser } from "react-icons/ci";
+import { BankOutlined, SearchOutlined, StockOutlined, BellOutlined, MailOutlined, RiseOutlined } from "@ant-design/icons";
 
 const Dashboard = () => {
     const [loading, setLoading] = useState(true); // State to track loading
@@ -35,14 +40,14 @@ const Dashboard = () => {
                         <li><a href="#" className="active">Shop</a></li>
                     </ul>
                 </div>
-                <a href="#" className="report">
+                <a href="#" className="flex text-center justify-center gap-3 px-3 bg-gray-300 p-2 rounded-md">
                     <i className='bx bx-cloud-download'></i>
-                    <span>Download CSV</span>
+                    <span className='text-black'>Download CSV</span>
                 </a>
             </div>
 
             <ul className="insights">
-                <li>
+                {/* <li>
                     <i className='bx bx-calendar-check'></i>
                     <span className="info">
                         <h3>
@@ -50,38 +55,91 @@ const Dashboard = () => {
                         </h3>
                         <p>Paid Order</p>
                     </span>
+                </li> */}
+                <li>
+                    <div className="bg-blue-200 p-6 rounded-md">
+                        <GrTransaction className='text-blue-800 text-3xl' />
+                    </div>
+
+                    <span className="info">
+                        <h3>  1,074 </h3>
+                        <p>Transactions</p>
+                    </span>
                 </li>
-                <li><i className='bx bx-show-alt'></i>
+                <li>
+                    <div className="bg-[#FFF2C6] p-6 rounded-md">
+                        <StockOutlined className='text-[#FBC02D] text-3xl' />
+                    </div>
+
+                    <span className="info">
+                        <h3>  $3,500,459 </h3>
+                        <p>Total Transactions Value</p>
+                    </span>
+                </li>
+                {/* <li><i className='bx bx-show-alt'></i>
                     <span className="info">
                         <h3>
                             3,944
                         </h3>
                         <p>Site Visit</p>
                     </span>
-                </li>
-                <li><i className='bx bx-line-chart'></i>
+                </li> */}
+                <li>
+                    <div className="bg-[#BBF7D0] p-6 rounded-md">
+                        <BsBox className='text-[#388E3C] text-3xl' />
+                    </div>
+
                     <span className="info">
-                        <h3>
-                            14,721
-                        </h3>
-                        <p>Searches</p>
+                        <h3>  28 </h3>
+                        <p>Available Products</p>
                     </span>
                 </li>
-                <li><i className='bx bx-dollar-circle'></i>
+
+                <li>
+                    <div className="bg-[#FECDD3] p-6 rounded-md">
+                        <BsFillPeopleFill className='text-[#D32F49] text-3xl' />
+                    </div>
+
                     <span className="info">
-                        <h3>
-                            $6,742
-                        </h3>
-                        <p>Total Sales</p>
+                        <h3>  11 </h3>
+                        <p>Registered Users</p>
+                        <p className='text-blue-400'>See Users</p>
+                    </span>
+                </li>
+                <li>
+                    <div className="bg-gray-300 p-6 rounded-md">
+                        <FcBusinessman className='text-4xl' />
+                    </div>
+                    <span className="info">
+                        <h3>8</h3>
+                        <p>Entities</p>
+                    </span>
+                </li>
+                <li>
+                    <div className="bg-gray-200 p-6 rounded-md">
+                        <CiUser className='text-4xl' />
+                    </div>
+                    <span className="info">
+                        <h3>8</h3>
+                        <p>Onboarded Corporations</p>
+                    </span>
+                </li>
+                <li>
+                    <div className="bg-[#E0F0F0] p-6 rounded-md">
+                        <BankOutlined className='text-4xl' />
+                    </div>
+                    <span className="info">
+                        <h3> 3 </h3>
+                        <p>Rating Agencies</p>
                     </span>
                 </li>
             </ul>
 
             <div className="bottom-data">
-                <div className="orders">
+                <div className="orders  mb-[8rem]">
                     <div className="header">
                         <i className='bx bx-receipt'></i>
-                        <h3>Recent Orders</h3>
+                        <h3>Recent Transactions</h3>
                         <i className='bx bx-filter'></i>
                         <i className='bx bx-search'></i>
                     </div>
@@ -122,10 +180,10 @@ const Dashboard = () => {
                     </table>
                 </div>
 
-                <div className="reminders">
+                <div className="reminders mb-[8rem]">
                     <div className="header">
                         <i className='bx bx-note'></i>
-                        <h3>Remiders</h3>
+                        <h3>Pending Termsheets</h3>
                         <i className='bx bx-filter'></i>
                         <i className='bx bx-plus'></i>
                     </div>

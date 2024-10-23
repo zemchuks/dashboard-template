@@ -40,7 +40,7 @@ const Settings = () => {
                     {/* First Section: Total Flights */}
                     <div className="grid grid-cols-1  md:grid-cols-4 gap-4">
                         {/* First Column: Flights Stats */}
-                        <div className="col-span-1 bg-blue-100 p-4  shadow-sm relative flex flex-col">
+                        <div className="col-span-1 bg-blue-100 p-4  shadow-sm flex flex-col">
                             <ul className="space-y-2 text-sm font-semibold text-black">
                                 <li>Total Transactions completed <span className="float-right text-black">425</span></li>
                                 <li>Not signed termsheets <span className="float-right text-black">27</span></li>
@@ -151,11 +151,11 @@ const Settings = () => {
             {isModalOpen && (
                 <>
                     {/* Background Blur */}
-                    <div className="fixed inset-0 bg-black/15 bg-opacity-50 backdrop-blur-[1px] z-40"></div>
+                    <div className="fixed inset-0 bg-black bg-opacity-50  z-40"></div>
 
                     {/* Centered Modal */}
                     <div className="fixed inset-0 flex items-center justify-center z-50">
-                        <div className="bg-white rounded-lg shadow-lg w-full max-w-lg p-6 space-y-4 relative">
+                        <div className="slide bg-white rounded-lg shadow-lg w-full max-w-lg p-6 space-y-4 relative">
                             {/* Modal Header */}
                             <div className="flex justify-between items-center">
                                 <h2 className="text-lg font-bold">Modal Header</h2>

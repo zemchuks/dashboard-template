@@ -90,7 +90,7 @@ const Navbar = ({ isSidebarClosed, setSidebarClosed, theme, setTheme }) => {
   };
 
   return (
-    <nav className='sticky top-0 z-50 bg-white shadow-md'>
+    <nav className='sticky top-0 bg-white shadow-md'>
       <SkeletonTheme baseColor="#D4D4D4">
         {loading ? <Skeleton height={30} width="90%" style={{ margin: '1rem', marginTop: '1rem' }} /> :
           <i className='bx bx-menu' onClick={handleMenuClick}></i>
@@ -111,21 +111,21 @@ const Navbar = ({ isSidebarClosed, setSidebarClosed, theme, setTheme }) => {
             <label htmlFor="theme-toggle" className="theme-toggle"></label>
           </>}
 
-        {loading ? <Skeleton height={30} width="90%" className='mr-4' style={{ margin: '1rem', marginTop: '1rem' }} /> : 
+        {loading ? <Skeleton height={30} width="90%" className='mr-4' style={{ margin: '1rem', marginTop: '1rem' }} /> :
           <button onClick={toggleFullscreen}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            className="hover:bg-gray-100 rounded-full"
-            viewBox="0 0 24 24"
-            style={{ fill: 'gray' }}
-          >
-            <path d="M5 5h5V3H3v7h2zm5 14H5v-5H3v7h7zm11-5h-2v5h-5v2h7zm-2-4h2V3h-7v2h5z"></path>
-          </svg>
-        </button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              className="hover:bg-gray-100 rounded-full"
+              viewBox="0 0 24 24"
+              style={{ fill: 'gray' }}
+            >
+              <path d="M5 5h5V3H3v7h2zm5 14H5v-5H3v7h7zm11-5h-2v5h-5v2h7zm-2-4h2V3h-7v2h5z"></path>
+            </svg>
+          </button>
         }
-        
+
 
         <div className='relative'>
           {loading ? <Skeleton height={30} width="90%" className='mr-4' style={{ margin: '1rem', marginTop: '1rem' }} /> :
@@ -173,7 +173,7 @@ const Navbar = ({ isSidebarClosed, setSidebarClosed, theme, setTheme }) => {
               ></div>
 
               {/* Modal */}
-              <div className={`fixed top-0 right-0 h-full bg-white w-full max-w-sm transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+              <div className={`fixed right-slide top-0 right-0 h-full bg-white w-full max-w-sm transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                 <div className="p-4 h-full flex flex-col">
                   <h2 className="text-lg font-bold">Notifications</h2>
 
