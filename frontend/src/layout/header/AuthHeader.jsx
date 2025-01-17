@@ -96,14 +96,14 @@ const Navbar = ({ isSidebarClosed, setSidebarClosed, theme, setTheme }) => {
           <i className='bx bx-menu' onClick={handleMenuClick}></i>
         }
         <form action="#">
-          {loading ? <Skeleton height={30} width="90%" style={{ margin: '1rem', marginTop: '1rem' }} /> :
+          {/* {loading ? <Skeleton height={30} width="90%" style={{ margin: '1rem', marginTop: '1rem' }} /> :
             <div className={`form-input ${isSearchFormShown ? 'show' : ''}`}>
               <input type="search" placeholder="Search..." />
               <button className="search-btn" type="submit" onClick={(e) => handleSearchClick(e)}>
                 <i className={`bx ${isSearchFormShown ? 'bx-x' : 'bx-search'}`}></i>
               </button>
             </div>
-          }
+          } */}
         </form>
         {loading ? <Skeleton height={30} width="90%" className='mr-4' style={{ margin: '1rem', marginTop: '1rem' }} /> :
           <>

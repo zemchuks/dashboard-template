@@ -1,3 +1,5 @@
+
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -31,6 +33,30 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        /* Custom scrollbar */
+        '.scrollbar-thin': {
+          'scrollbar-width': 'thin',
+        },
+        '.scrollbar-thumb-gray': {
+          'scrollbar-color': 'white',
+        },
+        '::-webkit-scrollbar': {
+          'height': '6px',
+          'width': '5px'
+        },
+        '::-webkit-scrollbar-thumb': {
+          'background-color': '#e3e8e3',
+          'border-radius': '9999px',
+        },
+        '::-webkit-scrollbar-track': {
+          'background-color': 'transparent',
+        },
+      });
+    },
+  ],
 }
+
 

@@ -2,7 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .main.active {
-    @apply md:w-full md:ml-0;
+  @apply md:w-full md:ml-0;
+}
+
+/* Custom scrollbar for Firefox */
+.scrollbar-hidden {
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+.scrollbar-thin {
+  scrollbar-width: 6px;
+  scrollbar-color: #a0aec0 transparent; /* Thumb color and track color */
+}
+
+/* Custom scrollbar for WebKit-based browsers */
+.scrollbar-thin::-webkit-scrollbar {
+  height: 5px; /* Horizontal scrollbar height */
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #a0aec0; /* Thumb color */
+  border-radius: 10px;
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit-based browsers */
+}
+
+.scrollbar-visible:hover::-webkit-scrollbar {
+  display: block; /* Show scrollbar on hover */
 }

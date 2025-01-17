@@ -45,8 +45,30 @@ body.dark {
 }
 
 body {
-  background: var(--grey);
-  overflow-x: hidden;
+  background: white;
+  /* overflow-x: hidden; */
+}
+
+.sticky-header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow when sticky */
+}
+
+/* Hide the spinner for number inputs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Remove spinners in Firefox */
+}
+
+.user__logo {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  object-fit: fill;
 }
 
 .sidebar {
@@ -78,7 +100,7 @@ body {
   align-items: center;
   color: var(--primary);
   z-index: 500;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   box-sizing: content-box;
 }
 
@@ -166,7 +188,7 @@ body {
 }
 
 .sidebar .side-menu li a.logout {
-  color: var(--danger);
+  
 }
 
 .content {
@@ -284,8 +306,8 @@ body {
 
 .content nav .theme-toggle {
   display: block;
-  min-width: 50px;
-  height: 25px;
+  min-width: 40px;
+  height: 23px;
   background: #d0d0d0;
   cursor: pointer;
   position: relative;
@@ -323,7 +345,7 @@ body {
 }
 
 .content main .header .left h1 {
-  font-size: 36px;
+  font-size: 25px;
   font-weight: 600;
   margin-bottom: 10px;
   color: var(--dark);
@@ -364,15 +386,15 @@ body {
 
 .content main .insights {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
   grid-gap: 15px;
   margin-top: 20px;
 }
 
 .content main .insights li {
-  padding: 24px;
+  padding: 13px;
   background: var(--light);
-  border-radius: 20px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   grid-gap: 24px;
@@ -693,3 +715,5 @@ body {
     transform: translateX(0);
   }
 }
+
+/* border utility class */
