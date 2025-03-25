@@ -10,7 +10,7 @@ class AuthStorage {
     static setStorageJsonData(key, data, keepMeLoggedIn) {
         keepMeLoggedIn ? localStorage.setItem(key, JSON.stringify(data)) : sessionStorage.setItem(key, JSON.stringify(data));
     }
-
+ 
     static getStorageData(key) {
         return localStorage.getItem(key) ? localStorage.getItem(key) : sessionStorage.getItem(key);
     }
