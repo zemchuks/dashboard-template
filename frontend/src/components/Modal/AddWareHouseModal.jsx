@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { Modal, TextField, Backdrop, Fade, Autocomplete } from '@mui/material';
+// import { Modal, TextField, Backdrop, Fade, Autocomplete } from '@mui/material';
 import { Col, Row } from 'react-bootstrap';
 import { entityGetAction } from '../../redux/actions/entityAction';
 import { useDispatch, useSelector } from 'react-redux';
 import { IoCloseSharp } from 'react-icons/io5';
-// import {Autocomplete} from "@mui/lab";
+import { Modal, Button, Group, Select } from '@mantine/core';
 
 const AddWareHouseModal = ({ onHide, show, wareHouseData, wareHouseId }) => {
 
@@ -114,7 +114,41 @@ const AddWareHouseModal = ({ onHide, show, wareHouseData, wareHouseId }) => {
     return (
         <>
             <div>
-                <Modal
+
+                <Modal opened={show} onClose={onHide} size="lg" title="Add Warehouse" centered>
+
+                    <div className='add-edit-product p-0 mt-3'>
+                        <div className='form'>
+
+                            <Group grow mb="md">
+                                <Select
+                                    label="Warehouse Company"
+                                    placeholder="Select Warehouse Company"
+                                    data={wareHouseCompanyOption.map(option => ({ value: option.value, label: option.label }))}
+                                    value={addWarehouse.warehouseCompany?.value || ''}
+                                    onChange={(value) => setAddWarehouse({ ...addWarehouse, warehouseCompany: wareHouseCompanyOption.find(ele => ele.value === value) })}
+                                />
+
+                                <Select
+                                    label="Warehouse"
+                                    placeholder="Select Warehouse"
+                                    data={wareHouseOption.map(option => ({ value: option.value, label: option.label }))}
+                                    value={addWarehouse.warehouse?.value || ''}
+                                    onChange={(value) => setAddWarehouse({ ...addWarehouse, warehouse: wareHouseOption.find(ele => ele.value === value) })}
+                                />
+                            </Group>
+
+
+                        </div>
+
+                        <Group grow mb="md" >
+                            <Button variant="outline" onClick={onHide} className="footer_cancel_btn">Cancel</Button>
+                            <Button onClick={save} className='footer_next_btn'>{wareHouseId ? "Edit" : "Save"}</Button>
+                        </Group>
+                    </div>
+                </Modal>
+
+                {/* <Modal
                     aria-labelledby="transition-modal-title"
                     aria-describedby="transition-modal-description"
                     className='model'
@@ -184,7 +218,7 @@ const AddWareHouseModal = ({ onHide, show, wareHouseData, wareHouseId }) => {
                             </div>
                         </div>
                     </Fade>
-                </Modal>
+                </Modal> */}
             </div>
         </>
     )

@@ -6,7 +6,7 @@ import { emailRegex, passwordRegex } from "../../../helper/utils";
 import { toast } from "react-hot-toast";
 import { userServices } from "../../../_Services/userServices";
 import { EyeInvisibleOutlined, EyeOutlined } from "@ant-design/icons";
-import { Spinner } from '../../../helper/Spinner';
+import Spinner from '../../../helper/Spinner';
 import { RiErrorWarningLine } from "react-icons/ri";
 
 

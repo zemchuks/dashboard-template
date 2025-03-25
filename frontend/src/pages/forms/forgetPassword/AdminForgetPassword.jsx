@@ -3,7 +3,7 @@ import { IoHomeOutline } from 'react-icons/io5'
 import { Link, useNavigate } from 'react-router-dom'
 import { admin } from '../../../_Services/adminServices';
 import { toast } from 'sonner';
-import { Spinner } from '../../../helper/Spinner';
+import Spinner  from '../../../helper/Spinner';
 import { RiErrorWarningLine } from 'react-icons/ri';
 import { emailRegex, passwordRegex } from "../../../helper/utils";
 import { EyeInvisibleOutlined, EyeOutlined } from '@ant-design/icons';

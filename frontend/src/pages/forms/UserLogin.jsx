@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { loginAction } from '../../redux/actions/loginAction';
-import { Spinner } from '../../helper/Spinner';
+import  Spinner  from '../../helper/Spinner';
 
 const UserLogin = () => {
     const onChange = (e) => {

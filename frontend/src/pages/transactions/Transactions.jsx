@@ -370,7 +370,7 @@ const Transactions = () => {
                         : "In Progress";
 
                 return (
-                    <div className="flex items-center bg-orange-100 px-2 gap-1 py-[3px] rounded">
+                    <div className="flex items-center justify-center bg-orange-100 gap-1 py-[1px] rounded">
                         <GoWorkflow className="text-orange-600" />
                         <span className="text-orange-600 font-semibold">{step}</span>
                     </div>

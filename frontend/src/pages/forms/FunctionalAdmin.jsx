@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { Checkbox } from 'antd';
 import { LOGIN } from '../../redux/types';
-import { Spinner } from '../../helper/Spinner';
+import Spinner  from '../../helper/Spinner';
 import { toast } from 'sonner';
 
 const FunctionalAdmin = () => {

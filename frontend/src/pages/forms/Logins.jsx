@@ -6,7 +6,7 @@ import { IoHomeOutline } from 'react-icons/io5';
 import { EyeInvisibleOutlined, EyeOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from 'react-redux';
 import { loginAction } from "../../redux/actions/loginAction";
-import { Spinner } from '../../helper/Spinner';
+import  Spinner  from '../../helper/Spinner';
 import { LOGIN } from '../../redux/types';
 import AuthStorage from '../../helper/AuthStorage';
 import STORAGEKEY from '../../config/APP/app.config';

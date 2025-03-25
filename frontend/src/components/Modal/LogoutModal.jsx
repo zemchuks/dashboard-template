@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { LOGIN } from '../../redux/types';
 import AuthStorage from '../../helper/AuthStorage';
-import { Spinner } from '../../helper/Spinner';
+// import Spinner from '../../helper/Spinner';
 
 const LogoutModal = ({ isOpen, onClose, onConfirm }) => {
     const [isLoading, setIsLoading] = useState(false);
@@ -54,9 +54,9 @@ const LogoutModal = ({ isOpen, onClose, onConfirm }) => {
                             Logging out...
                         </button>
                     ) : ( */}
-                        <button type="button" onClick={(e) => Logout(e)} className="rounded bg-green-50 px-4 py-2 text-sm font-medium text-green-600">
-                            Yes, I'm sure
-                        </button>
+                    <button type="button" onClick={(e) => Logout(e)} className="rounded bg-green-50 px-4 py-2 text-sm font-medium text-green-600">
+                        Yes, I'm sure
+                    </button>
                     {/* )} */}
 
                     <button type="button" onClick={onClose} className="rounded bg-gray-50 px-4 py-2 text-sm font-medium text-gray-600">

@@ -7,7 +7,7 @@ import { termSheetAction } from '../../redux/actions/termSheetAction'
 import { toast } from 'sonner'
 import { TERM_SHEET } from '../../redux/types'
 import { Modal, Button, Group, FileButton, Text } from '@mantine/core';
-import { Spinner } from '../../helper/Spinner'
+import Spinner  from '../../helper/Spinner'
 
 
 const ExcelModal = ({ isOpen, onClose, getId, refreshpage }) => {
