@@ -21,7 +21,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Toaster richColors position="top-right" toastOptions={{ duration: 3000 }} />
         </MantineProvider>
       </Provider>
-    </BrowserRouter>
+    </BrowserRouter>  
 
   </React.StrictMode>
 )
