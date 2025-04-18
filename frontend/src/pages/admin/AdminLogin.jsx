@@ -123,7 +123,7 @@ const AdminLogin = () => {
             <div className="w-full">
 
                 <h1 className="text-2xl mt-32 font-extrabold tracking-wider text-gray-800 capitalize">
-                    Super Admin Login
+                    Administrative Login
                 </h1>
 
                 <div className="mt-2">
